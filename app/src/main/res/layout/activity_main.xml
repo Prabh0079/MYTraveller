@@ -41,13 +41,13 @@
                     android:layout_marginTop="48dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/profile" />
+                    app:srcCompat="@drawable/profileprabh" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alex Johnson"
+                    android:text="Prabh"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:layout_marginStart="8dp"
