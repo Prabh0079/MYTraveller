@@ -2,22 +2,26 @@ package com.example.mytraveller.Auth;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.util.Patterns;
 
 import com.example.mytraveller.AllClasses.MainActivity;
 import com.example.mytraveller.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationActivity extends AppCompatActivity {
 
     private EditText fullNameEditText, emailEditText, passwordEditText;
     private Button registerButton;
     private TextView loginLink;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class RegistrationActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         registerButton = findViewById(R.id.registerBtn);
         loginLink = findViewById(R.id.loginText);
+
+        // Initialize FirebaseAuth
+        mAuth = FirebaseAuth.getInstance();
 
         // Register button click event
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -58,11 +65,8 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
-                // If validation passes, show success and navigate to MainActivity
-                Toast.makeText(RegistrationActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();  // Finish the registration activity
+                // Register the user with Firebase
+                registerUser(email, password);
             }
         });
 
@@ -75,5 +79,22 @@ public class RegistrationActivity extends AppCompatActivity {
                 finish();  // Optionally finish the registration activity
             }
         });
+    }
+
+    // Register user with Firebase Authentication
+    private void registerUser(String email, String password) {
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Registration successful, navigate to MainActivity
+                        Toast.makeText(RegistrationActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        // Registration failed, show error message
+                        Toast.makeText(RegistrationActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }
