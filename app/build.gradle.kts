@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
+    
+
 }
 
 android {
@@ -42,11 +44,13 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation ("com.github.bumptech.glide:glide:4.13.0")
     implementation ("com.github.ismaeldivita:chip-navigation-bar:1.4.0")
 
