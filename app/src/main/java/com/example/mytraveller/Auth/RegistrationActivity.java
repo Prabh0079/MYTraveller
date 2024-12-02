@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mytraveller.AllClasses.MainActivity;
+import com.example.mytraveller.MainActivity;
 import com.example.mytraveller.R;
 import com.google.firebase.auth.FirebaseAuth;
 
