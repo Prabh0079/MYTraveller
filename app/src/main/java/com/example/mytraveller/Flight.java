@@ -1,5 +1,4 @@
-package com.example.mytraveller.Prabh;
-
+package com.example.mytraveller;
 import java.io.Serializable;
 
 public class Flight implements Serializable {
@@ -147,3 +146,4 @@ public class Flight implements Serializable {
         this.toShort = toShort;
     }
 }
+

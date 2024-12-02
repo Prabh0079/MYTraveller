@@ -1,4 +1,4 @@
-package com.example.mytraveller.Prabh;
+package com.example.mytraveller;
 
 public class Location {
     private int Id;
