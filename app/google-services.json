@@ -8,6 +8,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:721479869752:android:9a098cec327821446dcdcd",
+        "android_client_info": {
+          "package_name": "com.example.flightbooking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwsu5Jb0YK-HSiViBBlPlpUHUdWzkVoto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:721479869752:android:2bf4dba8e9885c8f6dcdcd",
         "android_client_info": {
           "package_name": "com.example.mytraveller"
