@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp">
+
+    <!-- Flight Information -->
+    <TextView
+        android:id="@+id/tv_flight_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flight Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_departure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Departure: Location"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tv_arrival"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrival: Location"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: YYYY-MM-DD"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tv_flight_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flight Number: xxxxxx"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp" />
+
+    <!-- Flight Price Section -->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_price"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Price: $100"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@android:color/holo_green_dark"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+    <!-- Book Now Button -->
+    <Button
+        android:id="@+id/btn_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Book Now"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp" />
+
+</LinearLayout>
