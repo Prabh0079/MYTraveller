@@ -30,9 +30,31 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference usersRef;
 
     private final Map<String, String> iataMap = new HashMap<String, String>() {{
+        put("Amsterdam Schiphol Airport", "AMS");
         put("Auckland International Airport", "AKL");
+        put("Beijing Capital International Airport", "PEK");
+        put("Charles de Gaulle Airport", "CDG");
+        put("Chicago O'Hare International Airport", "ORD");
+        put("Dallas/Fort Worth International Airport", "DFW");
+        put("Denver International Airport", "DEN");
+        put("Doha Hamad International Airport", "DOH");
+        put("Dubai International Airport", "DXB");
+        put("Frankfurt am Main Airport", "FRA");
+        put("Heathrow Airport", "LHR");
+        put("Hong Kong International Airport", "HKG");
+        put("Incheon International Airport", "ICN");
+        put("Istanbul Airport", "IST");
+        put("John F. Kennedy International Airport", "JFK");
         put("Kuala Lumpur International Airport", "KUL");
+        put("Los Angeles International Airport", "LAX");
+        put("Miami International Airport", "MIA");
+        put("Montréal-Trudeau International Airport", "YUL");
+        put("São Paulo-Guarulhos International Airport", "GRU");
+        put("Shanghai Pudong International Airport", "PVG");
+        put("Singapore Changi Airport", "SIN");
         put("Sydney Kingsford Smith Airport", "SYD");
+        put("Tokyo Narita International Airport", "NRT");
+        put("Toronto Pearson International Airport", "YYZ");
     }};
 
     @SuppressLint("MissingInflatedId")
